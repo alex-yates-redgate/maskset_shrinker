@@ -1,7 +1,7 @@
 $ErrorActionPreference = "stop"
 
 # Config
-$maskSet = "C:\deleteme\maskset_shrinker\20230927T145556\out-big.DMSMaskSet"
+$maskSet = "C:\git\maskset_shrinker\source.DMSMaskSet"
 $out = "C:\deleteme\maskset_shrinker"
 $required_tables = @(
     "DM_CUSTOMER",
