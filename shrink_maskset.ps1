@@ -109,11 +109,9 @@ while (($current_line = $masksetReader.ReadLine()) -ne $null) {
         $copyTable = $thisTableIndex.Split(",")[0] 
         $tableName = $thisTableIndex.Split(",")[1]
         if ($copyTable -like "1"){
-            Write-Log "Copying $tableName to new masking set."
             $copyLine = $true
         }
         else {
-            Write-Log "Skipping $tableName in new masking set."
             $copyLine = $false
         }
     }
@@ -131,6 +129,7 @@ while (($current_line = $masksetReader.ReadLine()) -ne $null) {
         $currentTime = (Get-Date).ToString(“s”)
         $message = "  Copied $lineNumber lines out of $totalLines. ($percentComplete%)"
         Write-Output "$currentTime $message"
+        Write-Log "$message"
     }
 }
 $masksetReader.Close()
