@@ -7,9 +7,9 @@ $required_tables = @(
     "DM_CUSTOMER",
     "DM_CUSTOMER_NOTES"
 )
-$batchSize = 1000
-$readLogFrequency = 10000
-$writeLogFrequency = 1000
+$batchSize = 5000
+$readLogFrequency = 50000
+$writeLogFrequency = 5000
 
 # DON'T CHANGE ANYTHING BELOW THIS LINE
 if (-not (Test-Path $out)){
